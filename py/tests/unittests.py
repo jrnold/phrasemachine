@@ -1,3 +1,4 @@
+from __future__ import print_function
 # assuming this is run by pytest: http://doc.pytest.org/en/latest/
 # e.g.
 # py.test tests/unittests.py
@@ -56,5 +57,5 @@ def test_len_toks_equals_len_tags_nltk():
 
 def test_multisentence():
     pp = pm.get_phrases("blue table. blue table. blue table.")
-    print pp
+    print(pp)
     assert len(pp['counts'])==1  ## should be just 'blue table'.  if buggy, it can pick up spans across sentences
